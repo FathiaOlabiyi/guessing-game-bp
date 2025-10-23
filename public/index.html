@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Live Guessing Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="leftContainer">
+                <div class="chatSpace">
+                    <h3>Chat Space</h3>
+                    <div id="messages" class="messages"></div>
+                    <div id="timer" class="timer">Time left: <span id="timeLeft">0</span>s</div>
+                </div>
+            </div>
+
+            <div class="joinContainer">
+                <div class="join">
+                    <input type="text" class="inputName" id="inputName" placeholder="Enter your name"/>
+                    <button class="joinBtn" id="joinBtn">Join Game</button>
+                </div>
+            </div>
+
+            <div id="gameMaster" class="hidden">
+                <input type="text" class="question" id="question" placeholder="Enter Question">
+                <input type="text" id="answer" placeholder="Enter answer">
+                <input id="timeLimit" placeholder="60" type="number" min="10">
+                <button id="createQuestionBtn">Create Question</button>
+                <button id="startGameBtn">Start Game</button>
+            </div>
+
+            <div id="players" class="hidden">
+                <input type="text" id="guess" placeholder="Type your guess">
+                <button id="submitGuess">Submit Guess</button>
+            </div>
+
+            <div class="playersListContainer">
+                <div id="playersList">Players: 0</div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+<!-- <body>
+  <div class="container">
+    <div class="left">
+      <div class="card">
+        <h3>Chat / Game</h3>
+        <div id="messages" class="chat"></div>
+        <div id="timerLine" class="muted">Time left: <span id="timeLeft">0</span>s</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="card">
+        <input id="nameInput" placeholder="Enter your name" />
+        <button id="joinBtn">Join Game</button>
+
+        <div id="masterControls" class="hidden">
+          <textarea id="questionInput" placeholder="Enter question"></textarea>
+          <input id="answerInput" placeholder="Enter answer (hidden)" />
+          <input id="timeLimitInput" placeholder="Time limit seconds (default 60)" type="number" min="10" />
+          <button id="createBtn">Create Question</button>
+          <button id="startBtn">Start Game</button>
+        </div>
+
+        <div id="playerControls" class="hidden">
+          <input id="guessInput" placeholder="Type your guess" />
+          <button id="guessBtn">Submit Guess</button>
+        </div>
+
+        <div class="card" style="margin-top:10px">
+          <div id="playersList"><strong>Players (0):</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+ -->
